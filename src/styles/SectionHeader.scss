@@ -1,0 +1,11 @@
+.page-info {
+  display: grid;
+  place-items: center;
+  h1 {
+    color: var(--grey-green);
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}

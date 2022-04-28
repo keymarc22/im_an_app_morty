@@ -1,0 +1,118 @@
+.episodes-list--container {
+  display: grid;
+  .page-info {
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
+    h1 {
+      color: var(--grey-green);
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  ul li.character-toggle-true {
+    grid-row-end: span 3;
+  }
+
+  ul {
+    display: grid;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+    li {
+      padding: 0.5rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      border-radius: 15px;
+      hr {
+        border: 1px solid var(--light-green);
+      }
+      h2 {
+        color: var(--shadow-green);
+        margin-bottom: 0;
+      }
+      h4 {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        color: rgb(128, 121, 121);
+      }
+
+      .footer h4 {
+        color: var(--violet);
+        margin-bottom: 1rem;
+      }
+
+      .icon-container {
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        color: var(--black);
+        transition: background-color 0.2s ease-in;
+        cursor: pointer;
+      }
+
+      .icon-container:hover {
+        background-color: #f79ce994;
+        color: var(--violet);
+      }
+
+      .characters {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        .character-avatar-container {
+          width: 4rem;
+          height: 4rem;
+          margin: 0.5rem 0;
+          margin-left: -0.8rem;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: 0 0 0 4px #fff;
+          cursor: pointer;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .content > h3 {
+        margin: 0;
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .episodes-list--container {
+    .episodes-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .episodes-list--container {
+    .episodes-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+    }
+  }
+}
